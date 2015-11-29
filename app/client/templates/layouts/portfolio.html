@@ -1,0 +1,27 @@
+<template name="portfolio">
+   <div class="splash col-sm-4">
+{{#autoForm id="insertForm" type="insert" collection="Works"}}
+  {{> afQuickField name="name"}}
+  {{> afQuickField name="price"}}
+  {{> afQuickField name="fileId" type="cfs-file" collection="images"}}
+  <button type="submit">Submit</button>
+  {{/autoForm}}
+
+</div>
+  <div class="splash col-sm-4">
+      <h1>Portfolio</h1><br>
+      {{#each portfolio}}
+        {{> piece}}<br>
+      {{/each}}
+  </div>
+</template>
+
+<template name="piece">
+    {{this.name}}<br>
+    <a href="{{ this.url }}" target="_blank"><img src="{{ this.url }}" /></a><br>
+    {{#if this.work.purchasedBy}}
+     purchaed by: {{this.work.purchasedBy}}
+    {{else}}
+     price: {{this.price}}
+    {{/if}}
+</template>

@@ -1,0 +1,15 @@
+<template name="orders">
+  <div class="splash col-sm-4">
+      <h1>Orders</h1><br>
+      {{#each orders}}
+        {{> order}}<br>
+      {{/each}}
+  </div>
+</template>
+
+<template name="order">
+  <span class="text">
+    <img src="{{this.url}}">
+  </span>
+</template>
+

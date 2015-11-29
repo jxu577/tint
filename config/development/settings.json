@@ -1,0 +1,15 @@
+{
+  "public": {
+    "stripe": {
+      "testPublishableKey": "pk_test_X6e1v5DCCmHcYpnFCLua0uN0",
+      "livePublishableKey": "pk_live_I1CJ9DDxMUeGDb6Y9hWK0WjP"
+    }
+  },
+
+  "private": {
+    "stripe": {
+      "testSecretKey": "sk_test_IXDiU5Hk3M0G0VyQktohMhrw",
+      "liveSecretKey": "sk_live_Tu4l867K4aL1sPzf7bYAVfm5"
+    }
+  }
+}

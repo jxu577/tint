@@ -1,0 +1,17 @@
+<template name="artists">
+  <div class="splash col-sm-4">
+      <h1>Artists</h1><br>
+      {{#each artists}}
+        {{> artist}}<br>
+      {{/each}}
+  </div>
+</template>
+
+<template name="artist">
+  <span class="text">
+    {{profile.name}}
+  </span>
+</template>
+
+
+

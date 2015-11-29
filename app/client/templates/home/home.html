@@ -1,0 +1,11 @@
+<template name="Home">
+  {{#if currentUser}}
+  <div class="home">
+    <h1>Welcome {{currentUser.profile.name}}</h1>
+  </div>
+  {{else}}
+   <div class="welcome">
+    <h1>Welcome to Tint!</h1>
+  </div>
+  {{/if}}
+</template>

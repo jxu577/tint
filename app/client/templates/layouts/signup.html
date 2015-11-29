@@ -1,0 +1,17 @@
+<template name="signup">
+  <div class="splash col-sm-4">
+      <h1>Your account {{currentUser._id}}</h1><br>
+  </div>
+
+  <div class="splash col-sm-4">
+    <form>
+      <div class="form-group">
+        <label for="teamA">Sign up with Tint</label>
+        <input type="email" class="form-control" name="email" placeholder="Email"><br>
+        <input type="text" class="form-control" name="name" placeholder="Name"><br>
+        <input type="password" class="form-control" name="password" placeholder="Password"><br>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block"  id="newGameButton" value="submit">Submit</button>
+    </form>
+  </div>
+</template>

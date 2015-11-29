@@ -1,0 +1,20 @@
+<template name="artworks">
+  <div class="splash col-sm-4">
+      <h1>Artworks</h1><br>
+      {{#each artworks}}
+        {{> artwork}}<br>
+      {{/each}}
+  </div>
+</template>
+
+<template name="artwork">
+  <span class="text">
+    <img src="{{this.url}}">
+    {{#if this.work.purchasedBy}}
+      Sold
+    {{else}}
+    <button type="submit" class="btn btn-primary btn-block" price="{{this.price}}" value="submit">Submit</button>
+    {{/if}}
+  </span>
+</template>
+
