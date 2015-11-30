@@ -13,6 +13,7 @@ Template.artworks.events({
   'click button': function (e) {
     e.preventDefault();
     var price = this.price
+    var id = this.work._id
     StripeCheckout.open({
         key: 'pk_test_X6e1v5DCCmHcYpnFCLua0uN0',
         amount: price, // this is equivalent to $50
@@ -23,9 +24,9 @@ Template.artworks.events({
           stripeToken = res.id;
           console.info(res);
           Meteor.call('chargeCard', stripeToken, price);
+          Works.update({ _id: id}, {$set: { purchasedBy: Meteor.userId()}});
         }
       });
-    Works.update({ _id: this.work._id}, {$set: { purchasedBy: Meteor.userId()}});
   }
 });
 
